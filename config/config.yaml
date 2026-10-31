@@ -1,0 +1,27 @@
+server:
+  host: "0.0.0.0"
+  port: 8080
+
+workers:
+  count: 4
+
+queue:
+  capacity: 1024
+
+batching:
+  enabled: true
+  max_batch_size: 8
+  max_wait_ms: 5
+
+model:
+  name: "demo_mlp"
+  path: "models/model.onnx"
+  instances: 2
+
+load_shedding:
+  enabled: true
+  max_queue_wait_ms: 100
+
+logging:
+  level: "info"
+
